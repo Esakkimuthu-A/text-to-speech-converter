@@ -57,7 +57,7 @@ img:hover{
 
 .dropdown-menu ul {
   list-style: none;
-  padding: 8px 0;
+  padding: 8px;
   margin: 0;
 }
 
@@ -129,6 +129,7 @@ img:hover{
   font-size: 15px;
   padding: 10px;
   resize: none;
+  background-color: rgb(255, 255, 255);
 }
 
 .input-control::placeholder {
@@ -185,8 +186,6 @@ img:hover{
   font-size: 12px;
   opacity: 0.6;
 }
-
-
 
 
 @media screen and (max-width:599px) {

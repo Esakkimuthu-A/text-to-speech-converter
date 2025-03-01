@@ -49,7 +49,7 @@ export default function Dashboard() {
           {open && (
             <div className="dropdown-menu">
               <div className="menu-arrow"></div>
-              <ul>
+              <ul  onClick={toggleMenu}>
                 <li>Settings</li>
               </ul>
             </div>
