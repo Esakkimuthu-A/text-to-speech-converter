@@ -120,7 +120,7 @@ img:hover {
 }
 
 .card-inner-padding {
-  position: fixed;
+  position: relative;
   padding: 50px 20px;
 }
 
