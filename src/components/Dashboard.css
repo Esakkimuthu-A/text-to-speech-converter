@@ -120,11 +120,11 @@ img:hover {
 }
 
 .card-inner-padding {
-  position: relative;
   padding: 50px 20px;
 }
 
 .text-area-field {
+  position: relative;
   margin: 20px 0px;
 }
 
@@ -149,6 +149,7 @@ img:hover {
 }
 
 .play-button {
+  position: relative;
   height: 40px;
   padding: 10px 25px;
   margin: 5px;
