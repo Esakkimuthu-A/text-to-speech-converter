@@ -72,7 +72,6 @@ export default function Dashboard() {
           >
           </ClickSpark>
           <div className="card-inner-padding">
-
             <h2 className="card-heading">Text to <span>Speech</span> Converter</h2>
             <p className="card-paragraph">Enter text and convert into <span>speech</span></p>
             <div className="text-area-field">
