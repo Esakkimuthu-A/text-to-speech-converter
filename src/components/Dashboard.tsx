@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import './Dashboard.css';
 import settingsLogo from "../assets/settings.svg"
 import Particles from './Particles';
+import ClickSpark from './ClickSpark'
 
 export default function Dashboard() {
   const textRef = useRef<HTMLTextAreaElement | null>(null);
@@ -29,6 +30,7 @@ export default function Dashboard() {
 
   return (
     <div className="main-container">
+
       <div style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden' }}>
         <Particles
           particleColors={['#ffffff', '#ffffff']}
@@ -49,7 +51,7 @@ export default function Dashboard() {
           {open && (
             <div className="dropdown-menu">
               <div className="menu-arrow"></div>
-              <ul  onClick={toggleMenu}>
+              <ul onClick={toggleMenu}>
                 <li>Settings</li>
               </ul>
             </div>
@@ -61,13 +63,24 @@ export default function Dashboard() {
       </div>
       <div className="card-content">
         <div className="card">
-          <h2 className="card-heading">Text to <span>Speech</span> Converter</h2>
-          <p className="card-paragraph">Enter text and convert into <span>speech</span></p>
-          <div className="text-area-field">
-            <textarea placeholder="Enter the text" ref={textRef} className="input-control"></textarea>
+          <ClickSpark
+            sparkColor='#fff'
+            sparkSize={10}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
+          </ClickSpark>
+          <div className="card-inner-padding">
+
+            <h2 className="card-heading">Text to <span>Speech</span> Converter</h2>
+            <p className="card-paragraph">Enter text and convert into <span>speech</span></p>
+            <div className="text-area-field">
+              <textarea placeholder="Enter the text" ref={textRef} className="input-control"></textarea>
+            </div>
+            <p className="error-para">{error}</p>
+            <button className="play-button" onClick={handleClick}>{buttonText}</button>
           </div>
-          <p className="error-para">{error}</p>
-          <button className="play-button" onClick={handleClick}>{buttonText}</button>
         </div>
       </div>
       <div className="footer">
